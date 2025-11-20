@@ -78,14 +78,6 @@ const serverGroup: Record<string, MetadataItem | string> = {
 };
 
 // ---------------------------
-// 🔹 Firewall Group
-// ---------------------------
-
-const firewallGroup: Record<string, MetadataItem | string> = {
-  "huawei-usg6530e": "",
-};
-
-// ---------------------------
 // 🔹 Global Meta Config
 // ---------------------------
 const metaConfig: Record<string, MetadataItem> = {
@@ -99,8 +91,6 @@ const metaConfig: Record<string, MetadataItem> = {
       index: "",
       ...separator({ title: "Server" }),
       ...sorted(serverGroup, "asc"),
-      ...separator({ title: "Firewall" }),
-      ...sorted(firewallGroup, "asc"),
     },
   },
 };
