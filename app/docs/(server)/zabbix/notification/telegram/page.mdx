@@ -5,10 +5,6 @@ sidebarTitle: Telegram
 
 import { Steps } from "nextra/components";
 
-# Notification via Telegram
-
-<Steps>
-
 ## ขั้นตอนการสร้าง Telegram Bot
 
 1. ไปที่ [Telegram](https://web.telegram.org/a/) และล็อกอินเข้าสู่บัญชี Telegram ของคุณ (ถ้ายังไม่มีบัญชี ให้สมัครก่อน)
@@ -32,13 +28,15 @@ import { Steps } from "nextra/components";
 
    ![notification-telegram-5](/images/zabbix/notification-telegram-5.png)
 
-## เริ่มต้นใช้งานบอทที่คุณสร้างขึ้น
+### เริ่มต้นใช้งานบอท
 
 ไปที่หน้าต่างแชทของบอทที่คุณสร้าง แล้วพิมพ์คำสั่ง `/start` เพื่อเริ่มต้นการใช้งานบอท
 
 ![notification-telegram-6](/images/zabbix/notification-telegram-6.png)
 
-## วิธีการขอ ChatID ด้วย `@IDBot` บน Telegram
+<br />
+
+## ขั้นตอนการขอ ChatID
 
 1. ค้นหา `@IDBot` ใน Telegram และกด `START` เพื่อเริ่มต้นการใช้งาน
 
@@ -51,6 +49,8 @@ import { Steps } from "nextra/components";
    ![notification-telegram-8](/images/zabbix/notification-telegram-8.png)
 
 5. บอทจะตอบกลับพร้อมแสดง Chat ID ของคุณทันที
+
+<br />
 
 ## เปิดใช้งาน Media type Telegram
 
@@ -70,6 +70,8 @@ import { Steps } from "nextra/components";
 5. จากนั้นให้เปิดใช้งาน Media type สำหรับ Telegram โดยคลิกที่ข้อความสีแดงเพื่อเปลี่ยนสถานะจาก `Disable` เป็น `Enabled`
 
    ![notification-telegram-11](/images/zabbix/notification-telegram-11.png)
+
+<br />
 
 ## ตั้งค่า Trigger action
 
@@ -129,7 +131,7 @@ import { Steps } from "nextra/components";
 
    ![notification-telegram-23](/images/zabbix/notification-telegram-23.png)
 
-</Steps>
+<br />
 
 ## ตัวอย่างการแจ้งเตือน
 

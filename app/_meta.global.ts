@@ -25,14 +25,7 @@ const proxmoxVE: MetadataItem = {
   title: "Proxmox VE",
   items: {
     installation: "",
-    repository: "",
-    lxc: {
-      title: "LXC",
-      items: {
-        create: "",
-        template: "",
-      },
-    },
+    lxc: "",
   },
 };
 
@@ -85,6 +78,14 @@ const serverGroup: Record<string, MetadataItem | string> = {
 };
 
 // ---------------------------
+// 🔹 Firewall Group
+// ---------------------------
+
+const firewallGroup: Record<string, MetadataItem | string> = {
+  "huawei-usg6530e": "",
+};
+
+// ---------------------------
 // 🔹 Global Meta Config
 // ---------------------------
 const metaConfig: Record<string, MetadataItem> = {
@@ -98,14 +99,8 @@ const metaConfig: Record<string, MetadataItem> = {
       index: "",
       ...separator({ title: "Server" }),
       ...sorted(serverGroup, "asc"),
-    },
-  },
-
-  changelog: {
-    type: "page",
-    title: "Changelog",
-    theme: {
-      copyPage: false,
+      ...separator({ title: "Firewall" }),
+      ...sorted(firewallGroup, "asc"),
     },
   },
 };

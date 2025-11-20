@@ -12,4 +12,8 @@ export const changelog: Change[] = [
       "Add zabbix agent setup",
     ],
   },
+  {
+    date: "2025-11-20",
+    changes: ["Move LXC create, LXC template to LXC page"],
+  },
 ];
