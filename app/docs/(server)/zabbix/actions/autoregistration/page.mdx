@@ -21,11 +21,9 @@ Autoregistration Actions เป็นฟีเจอร์ของ Zabbix Serve
 
 Autoregistration จะทำงานได้เฉพาะกับ **Zabbix Agent** แบบ **Active** เท่านั้น เนื่องจาก Agent ประเภทนี้จะเป็นฝ่ายเริ่มต้นเชื่อมต่อ (Initiate Connection) ไปยัง Server หรือ Proxy ด้วยตัวเอง
 
-## ขั้นตอนการตั้งค่า Autoregistration สำหรับ Zabbix Agent แบบ Active
+## ขั้นตอนการตั้งค่า Autoregistration
 
-### 1. ตั้งค่า Zabbix Agent
-
-บนเครื่องที่ต้องการให้ทำ Autoregistration ให้แก้ไขไฟล์ zabbix_agent2.conf (หรือ zabbix_agentd.conf ถ้าใช้ Agent v1)
+ไปที่เครื่องที่ต้องการทำ Autoregistration จากนั้นแก้ไขไฟล์ `zabbix_agent2.conf` (หรือ zabbix_agentd.conf)
 
 ```bash
 sudo nano /etc/zabbix/zabbix_agent2.conf
@@ -45,19 +43,21 @@ Hostname=webserver01
 HostMetadata=linux
 ```
 
-> หมายเหตุ: ต้องรีสตาร์ท Zabbix Agent หลังจากแก้ไขไฟล์ config
+> [!NOTE]
+>
+> หลังจากทำการแก้ไขการตั้งค่าเรียบร้อย ควรรีสตาร์ท Zabbix agent เพื่ออัปเดตการตั้งค่าใหม่
 
 ## ตั้งค่า Autoregistration Action บน Zabbix Server
 
-### 1. ไปที่เมนู Alerts > Actions > Autoregistration actions
+1.  ไปที่เมนู Alerts > Actions > Autoregistration actions
 
-![auto-registration-1](/images/zabbix/auto-registration-1.png)
+    ![auto-registration-1](/images/zabbix/auto-registration-1.png)
 
-### 2. คลิกปุ่ม Create action
+2.  คลิกปุ่ม Create action
 
-![auto-registration-2](/images/zabbix/auto-registration-2.png)
+    ![auto-registration-2](/images/zabbix/auto-registration-2.png)
 
-### Action
+**แท็บ Action**
 
 - Name: ตั้งชื่อ action เช่น Autoregistration. Zabbix servers
 
@@ -71,31 +71,31 @@ HostMetadata=linux
 
     ![auto-registration-4](/images/zabbix/auto-registration-4.png)
 
-### Operations
-
-กำหนดสิ่งที่ Zabbix จะทำเมื่อเงื่อนไขตรง
-
-![auto-registration-6](/images/zabbix/auto-registration-6.png)
+**แท็บ Operations**
 
 - คลิกปุ่ม Add ใต้ส่วน Operations
-- จะมีหน้าต่าง Operation details ปรากฏขึ้น
 
+  ![auto-registration-6](/images/zabbix/auto-registration-6.png)
+
+- จะมีหน้าต่าง Operation details ปรากฏขึ้น
 - ที่ช่อง Operation type ให้เลือกสิ่งที่ต้องการให้ Zabbix ทำ เช่น:
 
   - Add to host group – นำเครื่องไปไว้ในกลุ่มที่กำหนด
   - Link to template – ผูกเครื่องเข้ากับเทมเพลตที่ใช้ในการมอนิเตอร์
 
-  ![auto-registration-7](/images/zabbix/auto-registration-7.png)
+    ![auto-registration-7](/images/zabbix/auto-registration-7.png)
 
-> คุณสามารถเพิ่มหลาย operations ได้ เช่น ผูกหลาย template หรือใส่หลาย group
+> [!TIP]
+>
+> สามารถเพิ่มเงื่อนไข Operations ได้มากกว่า 1 เงื่อนไข
 
 ตัวอย่าง:
 
 ![auto-registration-8](/images/zabbix/auto-registration-8.png)
 
-### 3. กด Add เพื่อบันทึก
+3.  กด Add เพื่อบันทึก
 
-### 4. ตรวจสอบผลลัพธ์ใน Zabbix Server
+4.  ตรวจสอบผลลัพธ์ใน Zabbix Server
 
 - ไปที่ Monitoring → Hosts
 - ตรวจสอบว่ามี Host ใหม่ถูกเพิ่มเข้ามาตามที่ตั้งค่าไว้หรือไม่
@@ -115,4 +115,6 @@ HostMetadata=linux
 
 ![auto-registration-5](/images/zabbix/auto-registration-5.png)
 
-> หมายเหตุ: การเพิ่มเงื่อนไขนี้จะช่วยให้ Action ทำงานเฉพาะกับ Agent ที่เชื่อมต่อผ่าน Proxy ที่ระบุไว้เท่านั้น
+> [!NOTE]
+>
+> การเพิ่มเงื่อนไขนี้จะช่วยให้ Action ทำงานเฉพาะกับ Agent ที่เชื่อมต่อผ่าน Proxy ที่ระบุไว้เท่านั้น

@@ -25,14 +25,7 @@ const proxmoxVE: MetadataItem = {
   title: "Proxmox VE",
   items: {
     installation: "",
-    repository: "",
-    lxc: {
-      title: "LXC",
-      items: {
-        create: "",
-        template: "",
-      },
-    },
+    lxc: "",
   },
 };
 
@@ -98,14 +91,6 @@ const metaConfig: Record<string, MetadataItem> = {
       index: "",
       ...separator({ title: "Server" }),
       ...sorted(serverGroup, "asc"),
-    },
-  },
-
-  changelog: {
-    type: "page",
-    title: "Changelog",
-    theme: {
-      copyPage: false,
     },
   },
 };

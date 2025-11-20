@@ -1,20 +1,13 @@
 ---
-title: Create CT - Proxmox VE
-sidebarTitle: Create CT
+title: LXC - Proxmox
+sidebarTitle: LXC
 ---
 
 import { Steps } from "nextra/components";
 
-# LXC (Linux Containers) คืออะไร?
+# LXC (Linux Containers)
 
 **LXC** เป็นเทคโนโลยีสำหรับการจำลองระบบปฏิบัติการแบบ **OS-level virtualization** บน Linux โดยช่วยให้สามารถรันหลายระบบ (containers) แยกจากกันได้ภายใต้เคอร์เนลเดียวกัน
-
-## จุดเด่นของ LXC
-
-- ใช้เคอร์เนลร่วมกันระหว่าง containers ทั้งหมด ทำให้ประหยัดทรัพยากร
-- แยก namespace เพื่อความปลอดภัยและความเป็นอิสระของแต่ละ container
-- ประสิทธิภาพใกล้เคียงกับการรันบนระบบจริง (near-native performance)
-- เหมาะสำหรับ workload ที่ต้องการความเบาและรวดเร็ว
 
 ## เปรียบเทียบ LXC กับ Docker
 
@@ -25,7 +18,44 @@ import { Steps } from "nextra/components";
 | ความยืดหยุ่น  | ยืดหยุ่นสูง แต่ซับซ้อนกว่าเล็กน้อย | ใช้ง่าย มี ecosystem มากมาย |
 | ความเบา       | เบากว่า VM แต่หนักกว่า Docker      | เบามาก ใช้งานง่าย           |
 
-## ขั้นตอนการสร้าง LXC Container บน Proxmox VE
+## ขั้นตอนการดาวน์โหลด Template
+
+<Steps>
+
+### เข้าสู่ระบบผ่าน Web Interface
+
+เปิดเว็บเบราว์เซอร์ แล้วไปที่ `https://<IP_ADDRESS>:8006`
+
+### ไปยังเมนู CT Templates
+
+เลือกเมนู **Datacenter** > **Node** > **local** > **CT Templates**
+
+![lxc-template-1](/images/proxmox-ve/lxc-template-1.png)
+
+### เปิดหน้าต่างเลือกเทมเพลต
+
+คลิกปุ่ม **Templates** ที่ด้านบนของหน้า
+
+![lxc-template-2](/images/proxmox-ve/lxc-template-2.png)
+
+### เลือกและดาวน์โหลดเทมเพลต
+
+- เลือกเทมเพลตที่ต้องการใช้งานจากรายการ
+- คลิกปุ่ม **Download** เพื่อเริ่มดาวน์โหลด
+
+  ![lxc-template-3](/images/proxmox-ve/lxc-template-3.png)
+
+### ตรวจสอบผลการดาวน์โหลด
+
+เมื่อดาวน์โหลดเสร็จ เทมเพลตจะปรากฏในรายการ พร้อมใช้งานสำหรับการสร้าง Container
+
+![lxc-template-4](/images/proxmox-ve/lxc-template-4.png)
+
+</Steps>
+
+<br />
+
+## ขั้นตอนการสร้าง CT Container
 
 <Steps>
 
@@ -115,10 +145,21 @@ import { Steps } from "nextra/components";
 
   ![lxc-create-9](/images/proxmox-ve/lxc-create-9.png)
 
-### เสร็จสิ้นการสร้าง
+### เสร็จสิ้น
 
 ระบบจะแสดงสถานะ **TASK OK** เมื่อการสร้างเสร็จสมบูรณ์
 
 ![lxc-create-10](/images/proxmox-ve/lxc-create-10.png)
 
 </Steps>
+
+## Default login credentials
+
+ชื่อผู้ใช้และรหัสผ่านที่ใช้ในการล็อกอินเข้าจัดการ CT Container
+
+- User: `root`
+- Password: `รหัสผ่านที่กำหนดไว้ในขั้นตอนการสร้าง`
+
+> [!IMPORTANT]
+>
+> ในกรณีที่ต้องการเข้าถึง Container ผ่าน SSH ผู้ใช้งานจะต้องสร้างบัญชีใหม่บนระบบ LXC โดยไม่สามารถใช้บัญชี root สำหรับการเชื่อมต่อได้
