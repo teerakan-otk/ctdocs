@@ -19,12 +19,7 @@ const prompt = Prompt({
   subsets: ["latin", "thai"],
 });
 
-const navbar = (
-  <Navbar
-    logo={<b>CTDOCS</b>}
-    projectLink="https://github.com/teerakanotk/ctdocs"
-  />
-);
+const navbar = <Navbar logo={<b>CTDOCS</b>} />;
 
 export default async function RootLayout({
   children,
@@ -40,6 +35,7 @@ export default async function RootLayout({
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/teerakanotk/ctdocs/tree/main"
           sidebar={{ defaultMenuCollapseLevel: 1, toggleButton: false }}
+          editLink={null}
         >
           {children}
         </Layout>
