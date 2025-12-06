@@ -6,22 +6,10 @@
  */
 
 import { sorted, separator } from "@/lib/utils";
-
-// ---------------------------
-// 🔹 Types
-// ---------------------------
-interface MetadataItem {
-  title?: string;
-  type?: "page" | "doc" | "separator";
-  display?: "normal" | "hidden" | "children";
-  theme?: Record<string, boolean | string>;
-  items?: Record<string, MetadataItem | string>;
-}
-
 // ---------------------------
 // 🔹 Server: Proxmox VE
 // ---------------------------
-const proxmoxVE: MetadataItem = {
+const proxmoxVE = {
   title: "Proxmox VE",
   items: {
     installation: "",
@@ -32,7 +20,7 @@ const proxmoxVE: MetadataItem = {
 // ---------------------------
 // 🔹 Server: Zabbix
 // ---------------------------
-const zabbix: MetadataItem = {
+const zabbix = {
   title: "Zabbix",
   items: {
     installation: "",
@@ -45,7 +33,7 @@ const zabbix: MetadataItem = {
 // ---------------------------
 // 🔹 Server: Technitium DNS
 // ---------------------------
-const technitiumDNS: MetadataItem = {
+const technitiumDNS = {
   title: "Technitium DNS",
   items: {
     installation: "",
@@ -57,7 +45,7 @@ const technitiumDNS: MetadataItem = {
 // ---------------------------
 // 🔹 Server: Nginx Proxy Manager
 // ---------------------------
-const nginxProxyManager: MetadataItem = {
+const nginxProxyManager = {
   title: "Nginx Proxy Manager",
   items: {
     installation: "",
@@ -69,7 +57,7 @@ const nginxProxyManager: MetadataItem = {
 // ---------------------------
 // 🔹 Server Group
 // ---------------------------
-const serverGroup: Record<string, MetadataItem | string> = {
+const serverGroup = {
   docker: "",
   "nginx-proxy-manager": nginxProxyManager,
   "proxmox-ve": proxmoxVE,
@@ -80,7 +68,7 @@ const serverGroup: Record<string, MetadataItem | string> = {
 // ---------------------------
 // 🔹 Global Meta Config
 // ---------------------------
-const metaConfig: Record<string, MetadataItem> = {
+const metaConfig = {
   docs: {
     type: "page",
     title: "Documentation",
