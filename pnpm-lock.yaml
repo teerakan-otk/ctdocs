@@ -27,6 +27,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.17
+      baseline-browser-mapping:
+        specifier: ^2.9.3
+        version: 2.9.3
       eslint:
         specifier: ^9
         version: 9.39.1(jiti@2.6.1)
