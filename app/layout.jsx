@@ -5,8 +5,6 @@ import "nextra-theme-docs/style.css";
 import "./globals.css";
 
 export const metadata = {
-  // Define your metadata here
-  // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
   title: {
     default: "CTDOCS",
     template: "%s | CTDOCS",
@@ -44,6 +42,7 @@ export default async function RootLayout({ children }) {
           footer={footer}
           sidebar={{ defaultMenuCollapseLevel: 1, toggleButton: false }}
           editLink={null}
+          navigation={false}
         >
           {children}
         </Layout>
