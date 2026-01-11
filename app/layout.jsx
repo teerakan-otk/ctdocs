@@ -13,7 +13,7 @@ export const metadata = {
 const navbar = (
   <Navbar
     logo={<b>CTDOCS</b>}
-    // ... Your additional navbar options
+    projectLink="https://github.com/teerakan-otk/ctdocs.git"
   />
 );
 
