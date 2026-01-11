@@ -12,7 +12,6 @@ import { sorted, separator } from "@/lib/utils";
 const proxmoxVE = {
   title: "Proxmox VE",
   items: {
-    installation: "",
     lxc: "",
   },
 };
@@ -23,7 +22,6 @@ const proxmoxVE = {
 const zabbix = {
   title: "Zabbix",
   items: {
-    installation: "",
     "interface-type": "",
     actions: "",
     notification: "",
@@ -36,7 +34,6 @@ const zabbix = {
 const technitiumDNS = {
   title: "Technitium DNS",
   items: {
-    installation: "",
     zone: "",
     dhcp: "",
   },
@@ -48,7 +45,6 @@ const technitiumDNS = {
 const nginxProxyManager = {
   title: "Nginx Proxy Manager",
   items: {
-    installation: "",
     "proxy-hosts": "",
     certificates: "",
   },

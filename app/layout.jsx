@@ -1,4 +1,4 @@
-import { Footer, Layout, Navbar } from "nextra-theme-docs";
+import { Layout, Navbar } from "nextra-theme-docs";
 import { Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import "./globals.css";
@@ -13,7 +13,7 @@ export const metadata = {
 const navbar = (
   <Navbar
     logo={<b>CTDOCS</b>}
-    // ... Your additional navbar options
+    projectLink="https://github.com/teerakan-otk/ctdocs.git"
   />
 );
 
