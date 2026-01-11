@@ -51,17 +51,17 @@ HostMetadata=linux
 
 1.  ไปที่เมนู Alerts > Actions > Autoregistration actions
 
-    ![auto-registration-1](/images/zabbix/auto-registration-1.png)
+    ![auto-registration-1](/assets/zabbix/auto-registration-1.png)
 
 2.  คลิกปุ่ม Create action
 
-    ![auto-registration-2](/images/zabbix/auto-registration-2.png)
+    ![auto-registration-2](/assets/zabbix/auto-registration-2.png)
 
 **แท็บ Action**
 
 - Name: ตั้งชื่อ action เช่น Autoregistration. Zabbix servers
 
-  ![auto-registration-3](/images/zabbix/auto-registration-3.png)
+  ![auto-registration-3](/assets/zabbix/auto-registration-3.png)
 
 - Conditions: เพิ่มเงื่อนไข เช่น
 
@@ -69,13 +69,13 @@ HostMetadata=linux
   - Operator: `matches`
   - Value: ระบุค่า `HostMetadata` ให้ตรงกันกับที่ตั้งค่าไว้ใน Agent
 
-    ![auto-registration-4](/images/zabbix/auto-registration-4.png)
+    ![auto-registration-4](/assets/zabbix/auto-registration-4.png)
 
 **แท็บ Operations**
 
 - คลิกปุ่ม Add ใต้ส่วน Operations
 
-  ![auto-registration-6](/images/zabbix/auto-registration-6.png)
+  ![auto-registration-6](/assets/zabbix/auto-registration-6.png)
 
 - จะมีหน้าต่าง Operation details ปรากฏขึ้น
 - ที่ช่อง Operation type ให้เลือกสิ่งที่ต้องการให้ Zabbix ทำ เช่น:
@@ -83,7 +83,7 @@ HostMetadata=linux
   - Add to host group – นำเครื่องไปไว้ในกลุ่มที่กำหนด
   - Link to template – ผูกเครื่องเข้ากับเทมเพลตที่ใช้ในการมอนิเตอร์
 
-    ![auto-registration-7](/images/zabbix/auto-registration-7.png)
+    ![auto-registration-7](/assets/zabbix/auto-registration-7.png)
 
 > [!TIP]
 >
@@ -91,7 +91,7 @@ HostMetadata=linux
 
 ตัวอย่าง:
 
-![auto-registration-8](/images/zabbix/auto-registration-8.png)
+![auto-registration-8](/assets/zabbix/auto-registration-8.png)
 
 3.  กด Add เพื่อบันทึก
 
@@ -113,7 +113,7 @@ HostMetadata=linux
    - Operator: `equals`
    - Proxy: เลือกเซิร์ฟเวอร์ Proxy ที่ต้องการตรวจสอบ
 
-![auto-registration-5](/images/zabbix/auto-registration-5.png)
+![auto-registration-5](/assets/zabbix/auto-registration-5.png)
 
 > [!NOTE]
 >

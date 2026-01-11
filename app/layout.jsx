@@ -1,7 +1,6 @@
 import { Footer, Layout, Navbar } from "nextra-theme-docs";
 import { Head } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
-import "nextra-theme-docs/style.css";
 import "./globals.css";
 
 export const metadata = {
@@ -17,7 +16,6 @@ const navbar = (
     // ... Your additional navbar options
   />
 );
-const footer = <Footer>MIT {new Date().getFullYear()} © CTDOCS.</Footer>;
 
 export default async function RootLayout({ children }) {
   return (
@@ -39,7 +37,6 @@ export default async function RootLayout({ children }) {
           navbar={navbar}
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
-          footer={footer}
           sidebar={{ defaultMenuCollapseLevel: 1, toggleButton: false }}
           editLink={null}
           navigation={false}

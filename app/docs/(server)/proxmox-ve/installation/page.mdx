@@ -27,19 +27,19 @@ import { Steps } from "nextra/components";
 
 เมื่อเข้าสู่หน้าต้อนรับ ให้เลือก `Install Proxmox VE` แล้วกด Enter เพื่อเริ่มการติดตั้ง
 
-![install-1](/images/proxmox-ve/install-1.png)
+![install-1](/assets/proxmox-ve/install-1.png)
 
 ### ยอมรับข้อตกลงการใช้งาน (EULA)
 
 อ่านข้อตกลงการใช้งานให้ครบถ้วน แล้วคลิก `I agree` เพื่อดำเนินการต่อ
 
-![install-2](/images/proxmox-ve/install-2.png)
+![install-2](/assets/proxmox-ve/install-2.png)
 
 ### เลือกดิสก์สำหรับติดตั้ง
 
 เลือกดิสก์ที่ต้องการใช้ในการติดตั้งระบบ แล้วคลิก `Next`
 
-![install-3](/images/proxmox-ve/install-3.png)
+![install-3](/assets/proxmox-ve/install-3.png)
 
 ### ตั้งค่าประเทศและเขตเวลา
 
@@ -48,7 +48,7 @@ import { Steps } from "nextra/components";
 
 เมื่อเสร็จแล้ว คลิก `Next`
 
-![install-4](/images/proxmox-ve/install-4.png)
+![install-4](/assets/proxmox-ve/install-4.png)
 
 ### ตั้งค่ารหัสผ่านและอีเมลผู้ดูแลระบบ
 
@@ -58,7 +58,7 @@ import { Steps } from "nextra/components";
 
 จากนั้นคลิก `Next`
 
-![install-5](/images/proxmox-ve/install-5.png)
+![install-5](/assets/proxmox-ve/install-5.png)
 
 ### กำหนดค่าการเชื่อมต่อเครือข่าย
 
@@ -68,13 +68,13 @@ import { Steps } from "nextra/components";
 - **Gateway:** กำหนด Default gateway
 - **DNS Server:** ระบุ DNS ที่ต้องการใช้
 
-  ![install-6](/images/proxmox-ve/install-6.png)
+  ![install-6](/assets/proxmox-ve/install-6.png)
 
 ### ตรวจสอบและเริ่มติดตั้ง
 
 ตรวจสอบการตั้งค่าทั้งหมดให้เรียบร้อย หากถูกต้อง คลิก `Install` เพื่อเริ่มการติดตั้งระบบ
 
-![install-7](/images/proxmox-ve/install-7.png)
+![install-7](/assets/proxmox-ve/install-7.png)
 
 ### เข้าสู่ระบบ Proxmox ผ่าน Web Interface
 
@@ -88,7 +88,7 @@ import { Steps } from "nextra/components";
 
 3. คลิกปุ่ม `Login` เพื่อเข้าสู่ระบบ
 
-   ![install-8](/images/proxmox-ve/install-8.png)
+   ![install-8](/assets/proxmox-ve/install-8.png)
 
 </Steps>
 
@@ -106,18 +106,18 @@ import { Steps } from "nextra/components";
 - ไปที่เมนู **Updates** > **Repositories**
 - คลิกเลือกบรรทัด `pve-enterprise` แล้วกด `Disable`
 
-![setup-1](/images/proxmox-ve/setup-1.png)
+![setup-1](/assets/proxmox-ve/setup-1.png)
 
 ### เพิ่ม No-Subscription Repository
 
 - ไปที่แท็บ **APT Repositories**
 - คลิกปุ่ม `Add`
 
-  ![setup-2](/images/proxmox-ve/setup-2.png)
+  ![setup-2](/assets/proxmox-ve/setup-2.png)
 
 - เลือกประเภท Repository เป็น **No-Subscription**
 
-  ![setup-3](/images/proxmox-ve/setup-3.png)
+  ![setup-3](/assets/proxmox-ve/setup-3.png)
 
 - คลิก `Add` เพื่อเพิ่มแหล่งแพ็กเกจ
 
@@ -126,19 +126,19 @@ import { Steps } from "nextra/components";
 - ไปที่เมนู Updates
 - คลิก `Refresh` เพื่อดึงข้อมูลแพ็กเกจล่าสุด
 
-![setup-4](/images/proxmox-ve/setup-4.png)
+![setup-4](/assets/proxmox-ve/setup-4.png)
 
 - รอจนสถานะขึ้นว่า `OK` แล้วกด `Esc` เพื่อปิดหน้าต่าง
 
-![setup-5](/images/proxmox-ve/setup-5.png)
+![setup-5](/assets/proxmox-ve/setup-5.png)
 
 - คลิก `Upgrade` เพื่อเริ่มการอัปเกรดแพ็กเกจ
 
-![setup-6](/images/proxmox-ve/setup-6.png)
+![setup-6](/assets/proxmox-ve/setup-6.png)
 
 - ในหน้าต่าง Terminal ที่ปรากฏขึ้น ให้พิมพ์ `Y` แล้วกด `Enter` เพื่อยืนยัน
 
-![setup-7](/images/proxmox-ve/setup-7.png)
+![setup-7](/assets/proxmox-ve/setup-7.png)
 
 ### รีบูตระบบ
 
